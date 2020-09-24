@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Hangman</title>
+		<link
+			rel="stylesheet"
+			href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
+		/>
+		<link rel="stylesheet" href="styles.css" />
+		<script defer src="app.js"></script>
+	</head>
+	<body>
+		<header class="header">
+			<h1 class="title">Hangman</h1>
+		</header>
+		<main class="container">
+			<section id="word-form-container">
+				<form id="word-form">
+					<div class="form-group">
+						<label for="word">Word</label>
+						<input
+							type="text"
+							name="word"
+							placeholder="Type a word here..."
+							autofocus
+							autocomplete="off"
+						/>
+					</div>
+					<div class="form-group buttons">
+						<button class="btn" type="submit" data-type="random">
+							Random
+						</button>
+						<button class="btn" type="submit" data-type="submit">
+							Submit
+						</button>
+					</div>
+				</form>
+			</section>
+			<section id="hangman-container" style="display: none">
+				<form id="letter-form">
+					<div class="form-group">
+						<label for="letter">Letter</label>
+						<input
+							name="letter"
+							type="text"
+							placeholder="Type a letter here..."
+							autofocus
+							autocomplete="off"
+						/>
+					</div>
+					<div class="form-group">
+						<button class="btn" type="submit">Submit</button>
+					</div>
+				</form>
+				<span id="correct-word"></span>
+			</section>
+		</main>
+	</body>
+</html>
