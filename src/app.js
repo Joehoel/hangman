@@ -1,3 +1,5 @@
+import { format } from "date-fns";
+
 const wordForm = document.querySelector("#word-form");
 const wordFormContainer = document.querySelector("#word-form-container");
 const hangmanContainer = document.querySelector("#hangman-container");
@@ -6,6 +8,7 @@ const correctWord = document.querySelector("#correct-word");
 
 let word;
 const correctLetters = [];
+const wrongLetters = [];
 
 function displayWord() {
 	correctWord.innerHTML = `
